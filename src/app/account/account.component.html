@@ -1,79 +1,4 @@
-<!--<div class="container">
-  <h2>Account Management</h2>-->
-<!-- Display Accounts -->
-<!--<div class="account-list">
-  <h3>All Accounts</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Account Number</th>
-        <th>Account Type</th>
-        <th>Balance</th>
-        <th>Currency</th>
-        <th>User</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let account of accounts">
-        <td>{{ account.accountNumber }}</td>
-        <td>{{ account.accountType }}</td>
-        <td>{{ account.balance | currency: account.currency }}</td>
-        <td>{{ account.currency }}</td>
-        <td>{{ account.user?.fullName }}</td>
-        <td>
-          <button (click)="getAccountDetails(account.accountId)">View</button>
-          <button (click)="closeAccount(account.accountId)">Close</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>-->
-<!-- Apply for Account Form -->
-<!--<div class="apply-account" *ngIf="currentUser">
-  <h3>Apply for a New Account</h3>
-  <form (ngSubmit)="applyForAccount()">
-    <div class="form-group">
-      <label for="accountType">Account Type:</label>
-      <input type="text" id="accountType" [(ngModel)]="accountForm.accountType" name="accountType" required>
 
-      <label for="currency">Currency:</label>
-      <input type="text" id="currency" [(ngModel)]="accountForm.currency" name="currency" required>
-
-      <label for="accountNumber">Account Number:</label>
-      <input type="text" id="accountNumber" [(ngModel)]="accountForm.accountNumber" name="accountNumber" readonly>
-
-      <label for="balance">Balance:</label>
-      <input type="number" id="balance" [(ngModel)]="accountForm.balance" name="balance" required>
-
-      <input type="hidden" id="userId" [(ngModel)]="accountForm.userId" name="userId" [value]="currentUser.userId" readonly>
-
-      <button type="submit">Apply</button>
-    </div>
-  </form>
-</div>-->
-<!-- Update Account Form -->
-<!--<div *ngIf="selectedAccountId != null" class="update-account">
-    <h3>Update Account</h3>
-    <form (ngSubmit)="updateAccount()">
-      <div class="form-group">
-        <label for="accountNumber">Account Number:</label>
-        <input type="text" id="accountNumber" [(ngModel)]="accountForm.accountNumber" name="accountNumber" readonly>
-
-        <label for="accountType">Account Type:</label>
-        <input type="text" id="accountType" [(ngModel)]="accountForm.accountType" name="accountType" required>
-
-        <label for="currency">Currency:</label>
-        <input type="text" id="currency" [(ngModel)]="accountForm.currency" name="currency" required>
-
-        <label for="balance">Balance:</label>
-        <input type="number" id="balance" [(ngModel)]="accountForm.balance" name="balance" required>
-
-        <button type="submit">Update</button>
-      </div>
-    </form>
-  </div>
-</div>-->
 <div class="container">
   <h2>Account Management</h2>
   <h3>Apply for a New Account</h3>
@@ -129,8 +54,6 @@
       </tbody>
     </table>
   </div>
-
-  <!-- Apply for Account Form -->
  
   <!-- Update Account Form -->
   <div *ngIf="selectedAccountId != null" class="update-account">
